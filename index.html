@@ -1,12 +1,236 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-</head>
-<body>
-    <h1>Katya Zubareva</h1>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Зубарева Екатерина — Портфолио</title>
+  <meta name="description" content="Портфолио Python Backend разработчика — высоконагруженные приложения, микросервисы, REST API." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+    :root { 
+        --glass: rgba(255,255,255,0.06); 
+    }
+
+    body { 
+        font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+    }
+
+    .frost {
+
+      backdrop-filter: blur(8px) saturate(120%);
+      background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+    }
     
+    .accent {
+      background: #ec4899;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .animate-fade { 
+        animation: fadeIn 700ms ease both; 
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-neutral-900 via-gray-900 to-black text-gray-100">
+
+  <div class="max-w-6xl mx-auto px-6 py-10">
+
+    <header class="flex items-center justify-between mb-24">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-pink-500 flex items-center justify-center shadow-xl">
+          <span class="font-semibold">KD</span>
+        </div>
+        <div>
+          <div class="text-sm text-gray-300">Зубарева Екатерина</div>
+          <div class="text-xs text-gray-500">Python Backend Developer</div>
+        </div>
+      </div>
+      <nav class="hidden md:flex gap-6 text-sm text-gray-300">
+        <a href="#about" class="hover:text-white">Обо мне</a>
+        <a href="#projects" class="hover:text-white">Проекты</a>
+        <a href="#skills" class="hover:text-white">Навыки</a>
+        <a href="#contact" class="hover:text-white">Контакты</a>
+      </nav>
+      <div class="md:hidden text-gray-300">Menu</div>
+    </header>
+
+    <section class="grid md:grid-cols-2 gap-8 items-center mb-12">
+      <div class="space-y-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+          Я создаю высоконагруженные Python-приложения и масштабируемые серверные системы
+        </h1>
+        <p class="text-gray-400 max-w-xl">
+          Опытный Python backend разработчик: REST API, микросервисы, оптимизация производительности, базы данных и интеграции с внешними сервисами. Решаю сложные задачи так, чтобы приложения работали быстро и стабильно.
+        </p>
+        <div class="flex gap-3 mt-4">
+          <a href="#projects" class="px-5 py-3 rounded-lg bg-pink-500 shadow-lg font-medium">Мои проекты</a>
+          <a href="#contact" class="px-5 py-3 rounded-lg border border-gray-700 text-sm text-gray-300">Связаться</a>
+        </div>
+        <div class="mt-6 flex gap-3 text-sm text-gray-400 flex-wrap">
+          <div class="tag">Python</div>
+          <div class="tag">Django</div>
+          <div class="tag">FastAPI</div>
+          <div class="tag">PostgreSQL</div>
+          <div class="tag">Docker</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="mb-12">
+      <div class="frost p-6 rounded-2xl">
+        <h2 class="text-2xl font-semibold mb-2">Обо мне</h2>
+        <p class="text-gray-300">
+          Создаю масштабируемые и высоконагруженные серверные приложения на Python с использованием Django, Flask и FastAPI. Мои проекты включают REST API, микросервисы, real-time системы и сложные интеграции с внешними сервисами. Люблю оптимизацию, чистый код и надежность.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="mb-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-semibold">Проекты</h2>
+        <div class="text-sm text-gray-400">3 ключевых проекта • open-source примеры доступны</div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <article class="frost p-5 rounded-2xl hover:scale-[1.02] transition-transform">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold text-lg">HighLoad API — Финансовая платформа</h3>
+              <p class="text-sm text-gray-300 mt-2">
+                Создание высоконагруженного REST API на FastAPI для обработки миллионов транзакций в день. Оптимизация PostgreSQL и кеширование для стабильной работы системы под нагрузкой.
+              </p>
+              <div class="mt-4 flex gap-2 text-xs text-gray-400 flex-wrap">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Redis</span>
+              </div>
+            </div>
+            <div class="text-sm text-gray-400">2025</div>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="text-sm px-3 py-2 rounded-lg border border-gray-700">Демо</a>
+            <a href="#" class="text-sm px-3 py-2 rounded-lg border border-gray-700">Код</a>
+          </div>
+        </article>
+
+        <article class="frost p-5 rounded-2xl hover:scale-[1.02] transition-transform">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold text-lg">EduTrack — Система онлайн-обучения</h3>
+              <p class="text-sm text-gray-300 mt-2">
+                Backend на Django с микросервисной архитектурой. Реализовал REST API, управление пользователями, прогрессом и интеграцию с внешними сервисами. Оптимизация запросов и асинхронные задачи через Celery.
+              </p>
+              <div class="mt-4 flex gap-2 text-xs text-gray-400 flex-wrap">
+                <span class="tag">Python</span>
+                <span class="tag">Django</span>
+                <span class="tag">Celery</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="text-sm text-gray-400">2024</div>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="text-sm px-3 py-2 rounded-lg border border-gray-700">Демо</a>
+            <a href="#" class="text-sm px-3 py-2 rounded-lg border border-gray-700">Код</a>
+          </div>
+        </article>
+
+        <article class="frost p-5 rounded-2xl hover:scale-[1.02] transition-transform">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold text-lg">GameServer — Реaltime сервер для игр</h3>
+              <p class="text-sm text-gray-300 mt-2">
+                Разработка сервера на Python с WebSocket для реального времени, балансировкой нагрузки и масштабированием. Поддержка тысяч одновременных игроков без лагов и с минимальной задержкой.
+              </p>
+              <div class="mt-4 flex gap-2 text-xs text-gray-400 flex-wrap">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">WebSocket</span>
+                <span class="tag">Docker</span>
+              </div>
+            </div>
+            <div class="text-sm text-gray-400">2023</div>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="text-sm px-3 py-2 rounded-lg border border-gray-700">Демо</a>
+            <a href="#" class="text-sm px-3 py-2 rounded-lg border border-gray-700">Код</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Навыки</h2>
+      <div class="flex flex-wrap gap-2 text-sm text-gray-400">
+        <div class="tag">Python</div>
+        <div class="tag">Django</div>
+        <div class="tag">Flask</div>
+        <div class="tag">FastAPI</div>
+        <div class="tag">REST API</div>
+        <div class="tag">PostgreSQL</div>
+        <div class="tag">Redis</div>
+        <div class="tag">Docker</div>
+        <div class="tag">Celery</div>
+        <div class="tag">Microservices</div>
+        <div class="tag">WebSocket</div>
+        <div class="tag">Testing</div>
+        <div class="tag">Optimization</div>
+      </div>
+    </section>
+
+    <section id="contact" class="mb-12">
+      <div class="frost p-6 rounded-2xl">
+        <h2 class="text-2xl font-semibold mb-2">Контакты</h2>
+        <p class="text-gray-300 mb-4">
+          Готова обсудить фриланс-проекты или постоянную работу в качестве Python backend разработчика. Отвечу в течение 24 часов.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 md:items-center">
+          <a href="https://t.me/abouttkate" class="px-5 py-3 rounded-lg bg-pink-500 shadow-lg" target="_blank" rel="noopener noreferrer">Написать</a>
+          <div class="text-sm text-gray-400">
+            Github: <a href="https://github.com/KatyaZubareva" class="text-gray-200 underline">github.com/KatyaZubareva</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center text-sm text-gray-500 mt-12">
+      © Ekaterina Zubareva
+    </footer>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const id = a.getAttribute('href');
+        if(id === '#') return;
+        const el = document.querySelector(id);
+        if(el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+
 </body>
 </html>
